@@ -8,9 +8,9 @@
 const inputRef = document.querySelector('#validation-input');
 const datLenRef = inputRef.getAttribute('data-length');
 
-inputRef.addEventListener('blur', e => {
+inputRef.addEventListener('input', e => {
 const value = e.target.value.length;
-console.log(value);
+// console.log(value);
 
 if (value == datLenRef){
 inputRef.classList.remove('invalid');

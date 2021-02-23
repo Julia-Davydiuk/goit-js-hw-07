@@ -23,17 +23,23 @@ const images = [
   ];
 
   const ulRef = document.querySelector('#gallery');
+  const createProduct = images.map( 
+    (itemAttributes) =>
+      `<li class="gallery__list-item"><img src="${itemAttributes.url}" alt="${itemAttributes.alt}" width="200" height="100"/></li>`
+  ).join("");
+  ulRef.insertAdjacentHTML("beforeend", createProduct);
+  ulRef.classList.add("gallery-list");
 
-  const createProduct = images.map(image => {
-    const liRef = document.createElement('li');
-    const imgRef = document.createElement('img');
-    imgRef.src = image.url;
-    imgRef.alt = image.alt;
-    // console.log(imgRef)
-    liRef.append(imgRef)
-    return liRef
-    // console.log(liRef)
-  });
+  // const ulRef = document.querySelector('#gallery');
 
-  ulRef.append(...createProduct);
-  console.dir(ulRef);
+  // const createProduct = images.map(image => {
+  //   const liRef = document.createElement('li');
+  //   const imgRef = document.createElement('img');
+  //   imgRef.src = image.url;
+  //   imgRef.alt = image.alt;
+  //   liRef.append(imgRef)
+  //   return liRef
+  // });
+
+  // ulRef.append(...createProduct);
+  // console.dir(ulRef);
