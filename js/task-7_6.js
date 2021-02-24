@@ -8,7 +8,7 @@
 const inputRef = document.querySelector('#validation-input');
 const datLenRef = inputRef.getAttribute('data-length');
 
-inputRef.addEventListener('input', e => {
+inputRef.addEventListener('blur', e => {
 const value = e.target.value.length;
 // console.log(value);
 

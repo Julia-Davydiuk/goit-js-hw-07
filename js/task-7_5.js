@@ -4,7 +4,7 @@
 
 const inputRef = document.querySelector('input');
 
-inputRef.addEventListener('blur', e => {
+inputRef.addEventListener('input', e => {
 const value = e.target.value;
 console.dir(value); 
 
